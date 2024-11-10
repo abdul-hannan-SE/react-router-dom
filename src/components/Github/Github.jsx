@@ -24,13 +24,10 @@ function Github() {
 
 export default Github;
 export const gitHubDataLoader = async () => {
-  const fakeData = await fetch("https://dummyjson.com/products");
-  console.log(fakeData.json());
-  // let res = await fetch("https://api.github.com/users/abdul-hannan-SE");
-  // res = res.json();
-  const res = {};
-  res.avatar_url =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6cA7COG8jz4E74wVLywZDFArLDanmayOcw&s";
+
+  let res = await fetch("https://api.github.com/users/abdul-hannan-SE");
+  res = res.json();
+
 
   return res.json();
 };
