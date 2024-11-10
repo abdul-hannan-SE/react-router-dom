@@ -26,8 +26,5 @@ export default Github;
 export const gitHubDataLoader = async () => {
 
   let res = await fetch("https://api.github.com/users/abdul-hannan-SE");
-  res = res.json();
-
-
   return res.json();
 };
